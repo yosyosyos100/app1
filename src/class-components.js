@@ -1,17 +1,19 @@
-import React from "react";
+import React, { Component } from 'react';
 
-export default class Calendar extends React.Component{
-    getDate(){
-        const dayNames=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
-        const monthNames=['January','February','March','April','May','June','July','August','September','October','November','December']
-        const date = new Date()
-        const weekDay = dayNames[date.getDay()]
-        const day = date.getDate()
-        const month = monthNames[date.getMonth()]
-        const year = date.getFullYear()
-        return `${weekDay} ${day} ${month} ${year}`
+export default class MyComponent extends Component {
+    showAlert(msg) {
+        alert(msg);
     }
-    render(){
-        return <div>{this.getDate()}</div>
+
+    onClickButtonOK = () => { 
+        this.showAlert("Hello"); 
+    }
+
+    render() {
+        return (
+            <button onClick={this.onClickButtonOK}>
+                OK
+            </button>
+        );
     }
 }

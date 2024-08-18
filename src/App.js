@@ -1,11 +1,17 @@
-import React from 'react'
-import { Header, Content, Footer } from './func-components'
+import React from 'react';
+import Button from './class-components';
+import Calculator from './calculator';
+import {EventData} from './event-data'
 
-
-export default function App(){
-  return(
-    <>
-    <Header /> <Content /> <Footer />
-    </>
-  )
+function App() {
+  return (
+    <div>
+      <Button />
+      <Calculator />
+      <EventData />
+    </div>
+  );
 }
+
+export default App;
+
